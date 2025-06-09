@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sebastian Inaba Portfolio</title>
+    <meta name="description" content="Portfolio of Sebastian Inaba" />
+    <meta name="keywords" content="Sebastian Inaba, Inaba, webmaster, web developer, portfolio, Sweden, Japan, JavaScript, React, Node.js, CSS, HTML, WordPress, Figma" />
+    <meta name="author" content="Sebastian Inaba" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <meta property="og:title" content="Sebastian Inaba | Web Developer Portfolio" />
+    <meta property="og:description" content="Portfolio of Sebastian Inaba, a Swedish web developer based in Japan. Specializing in creative, user-friendly, minimalist web experiences." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-portfolio-url.com/" />
+    <meta property="og:image" content="https://your-portfolio-url.com/images/PhotoMe.jpg" />
+    <meta property="og:site_name" content="Sebastian Inaba Portfolio" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sebastian Inaba",
+      "url": "https://your-portfolio-url.com",
+      "image": "https://your-portfolio-url.com/images/PhotoMe.jpg",
+      "jobTitle": "Web Developer",
+      "sameAs": [
+        "https://github.com/yourusername",
+        "https://linkedin.com/in/yourusername",
+        "https://twitter.com/yourusername"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <header class="siteHeader">
+        <a href="/" class="logo" aria-label="Home">INABA</a>
+        <div class="header-actions">
+            <a href="index.html#section5" class="ctaButton">Contact Me</a>
+            <a href="CV/CV .pdf" class="ctaButton secondary" download>Download CV</a>
+        </div>
+    </header>
+    <main>
+        <section id="section4" class="projectsSection">
+            <div class="content projectShowcase">
+                <h1>Projects</h1>
+                <div class="projectsGrid">
+                    <div class="projectCard">
+                        <img src="images/portfolioHighlightPicSmall.png" alt="Screenshot of My Portfolio website" class="project-image">
+                        <h2>My Portfolio</h2>
+                        <p>My first personal project</p>
+                        <p class="projectTools">HTML, CSS, JavaScript</p>
+                        <div class="buttonRow">
+                            <a href="projectDetails.html" class="ctaButton">View Project</a>
+                            <a href="https://github.com/yourusername/portfolio" class="ctaButton" target="_blank" rel="noopener">View GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Repeat .projectCard for each project -->
+                    <div class="projectCard">
+                        <img src="images/anotherProject.png" alt="Screenshot of Another Project" class="project-image">
+                        <h2>Another Project</h2>
+                        <p>Short description of another project.</p>
+                        <p class="projectTools">React, Node.js, MongoDB</p>
+                        <div class="buttonRow">
+                            <a href="#" class="ctaButton">View Project</a>
+                            <a href="#" class="ctaButton" target="_blank" rel="noopener">View GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Add more projectCard blocks as needed -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footerMedia">
+            <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+                <img src="fontawesome/svgs/brands/github.svg" alt="GitHub logo" class="footerIcon">
+            </a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+                <img src="fontawesome/svgs/brands/linkedin.svg" alt="LinkedIn logo" class="footerIcon">
+            </a>
+            <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter">
+                <img src="fontawesome/svgs/brands/twitter.svg" alt="Twitter logo" class="footerIcon">
+            </a>
+        </div>
+        <div class="footerCredit">
+            &copy; <span id="getYear"></span> Created by Sebastian Inaba. All rights reserved.
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
