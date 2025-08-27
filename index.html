@@ -1,165 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Sebastian Inaba Portfolio</title>
-    <meta name="description" content="Portfolio of Sebastian Inaba" />
-    <meta name="keywords" content="Sebastian Inaba, Inaba, webmaster, web developer, portfolio, Sweden, Japan, JavaScript, React, Node.js, CSS, HTML, WordPress, Figma" />
-    <meta name="author" content="Sebastian Inaba" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    <meta property="og:title" content="Sebastian Inaba | Web Developer Portfolio" />
-    <meta property="og:description" content="Portfolio of Sebastian Inaba, a Swedish web developer based in Japan. Specializing in creative, user-friendly, minimalist web experiences." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://your-portfolio-url.com/" />
-    <meta property="og:image" content="https://your-portfolio-url.com/images/PhotoMe.jpg" />
-    <meta property="og:site_name" content="Sebastian Inaba Portfolio" />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Sebastian Inaba",
-      "url": "https://your-portfolio-url.com",
-      "image": "https://your-portfolio-url.com/images/PhotoMe.jpg",
-      "jobTitle": "Web Developer",
-      "sameAs": [
-        "https://github.com/yourusername",
-        "https://linkedin.com/in/yourusername",
-        "https://twitter.com/yourusername"
-      ]
-    }
-    </script>
-</head>
-<body>
-    <header class="siteHeader">
-        <a href="/" class="logo" aria-label="Home">INABA</a>
-        <div class="header-actions">
-            <a href="#section5" class="ctaButton">Contact Me</a>
-            <a href="CV/CV .pdf" class="ctaButton secondary" download>Download CV</a>
-        </div>
-    </header>
-    <main>
-        <section id="section1">
-            <div class="content introColumns">
-                <div class="introText">
-                    <h1>Hello!</h1>
-                    <h3>I'm <span class="nameSpan">Sebastian Inaba</span>,</h3>
-                    <h3>a webmaster who designs, builds, and maintain the web</h3>
-                </div>
-                <div class="profileImage">
-                    <img src="images/PhotoMe.jpg" alt="Profile Image of Sebastian Inaba" />
-                </div>
-            </div>
-        </section>
-        <section id="section2">
-            <div class="content aboutMe">
-                <h1>About Me</h1>
-                <p>
-                    I’m a Swedish web developer currently based in Japan that is passionate about creating creative, user-friendly web experiences, using a minimalist style that keeps things clean, functional, and focused.
-                </p>
-                <p>
-                    I love the satisfaction of finnaly solving problems and turning ideas into functional websites or web applications. What excites me most is the dynamic and ever-changing nature of web development, no projects are exactly the same. Even small ideas can lead to big things. This creative environment, where innovation challenges the status quo, reminds me of the disruptive innovation theori.
-                </p>
-                <p>
-                    My goal is to join a collaborative web development team where I can grow, contribute, and keep learning. I’m also eager to gain experience working directly with client maneging and turning their needs into thoughtful, effective solutions.
-                </p>
-                <p>
-                    Outside of coding, I enjoy spending time with my family and gaming, both keep me inspired and balanced. These experiences have helped me develop a broad set of <span>skills</span>.
-                </p>
-            </div>
-        </section>
-        <section id="section3">
-            <div class="content skillsGrid">
-                <div class="skillItem">
-                    <img src="fontawesome/svgs/brands/html5.svg" alt="HTML">
-                    <span>HTML</span>
-                </div>
-                <div class="skillItem">
-                    <img src="fontawesome/svgs/brands/css3-alt.svg" alt="CSS">
-                    <span>CSS</span>
-                </div>
-                <div class="skillItem">
-                    <img src="fontawesome/svgs/brands/js.svg" alt="JavaScript">
-                    <span>JavaScript</span>
-                </div>
-                <div class="skillItem">
-                    <img src="fontawesome/svgs/brands/react.svg" alt="React">
-                    <span>React</span>
-                </div>
-                <div class="skillItem">
-                    <img src="fontawesome/svgs/brands/node-js.svg" alt="Node.js">
-                    <span>Node.js</span>
-                </div>
-                <div class="skillItem">
-                    <img src="icons/express-js.svg" alt="Express">
-                    <span>Express</span>
-                </div>
-                <div class="skillItem">
-                    <img src="icons/mongodb.svg" alt="MongoDB">
-                    <span>MongoDB</span>
-                </div>
-                <div class="skillItem">
-                    <img src="fontawesome/svgs/brands/figma.svg" alt="Figma">
-                    <span>Figma</span>
-                </div>
-                <div class="skillItem">
-                    <img src="fontawesome/svgs/brands/wordpress.svg" alt="WordPress">
-                    <span>WordPress</span>
-                </div>
-                <div class="skillItem">
-                    <img src="fontawesome/svgs/brands/github.svg" alt="GitHub">
-                    <span>GitHub</span>
-                </div>
-            </div>
-        </section>
-        <section id="section4">
-            <div class="content projectShowcase">
-                <h1>Projects</h1>
-                <div class="featuredProject">
-                    <img src="images/portfolioHighlightPicSmall.png" alt="Project Highlight of web application" class="project-image">
-                    <h2>My Portfolio</h2>
-                    <p>My first personal project</p>
-                    <div class="buttonRow">
-                        <a href="projectDetails.html" class="ctaButton">View Project</a>
-                        <a href="projectDetails.html" class="ctaButton">View GitHub</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sebastian Inaba | Web Developer</title>
+        <link rel="stylesheet" href="/ModernWeb/modern-style.css" />
+        
+        <!-- Primary Meta Tags -->
+        <meta name="description" content="Sebastian Inaba,  Swedish web developer based in Japan specializing in React, Node.js, and modern web applications. Creative, user-friendly, and minimalist web experiences." />
+        <meta name="keywords" content="Sebastian Inaba, Inaba Sebastian, web developer, web designer, frontend developer, React developer, Node.js developer, Sweden, Japan, JavaScript, React, Node.js, CSS, HTML, MongoDB, MERN stack, Figma, portfolio" />
+        <meta name="author" content="Sebastian Inaba" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://InabaSebastian.com/" />
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://InabaSebastian.com/" />
+        <meta property="og:title" content="Sebastian Inaba | Web Developer & Designer" />
+        <meta property="og:description" content="Swedish web developer based in Japan specializing in React, Node.js, and modern web applications. Creative, user-friendly, and minimalist web experiences." />
+        <meta property="og:image" content="https://InabaSebastian.com/images/highlight/modernPortfolioHighlight.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Sebastian Inaba Portfolio" />
+        
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://InabaSebastian.com/" />
+        <meta property="twitter:title" content="Sebastian Inaba | Web Developer & Designer" />
+        <meta property="twitter:description" content="Swedish web developer based in Japan specializing in React, Node.js, and modern web applications." />
+        <meta property="twitter:image" content="https://InabaSebastian.com/images/highlight/modernPortfolioHighlight.png" />
+        
+        <!-- Schema Structured Data -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Sebastian Inaba",
+                "url": "https://InabaSebastian.com",
+                "image": "https://InabaSebastian.com/images/highlight/modernPortfolioHighlight.png",
+                "jobTitle": "Web Developer",
+                "description": "Swedish web developer based in Japan specializing in React, Node.js, and modern web applications.",
+                "nationality": ["Swedish"],
+                "knowsLanguage": ["en", "sv"],
+                "knowsAbout": ["Web Development", "React", "Node.js", "JavaScript", "MERN Stack", "Frontend Development", "UI/UX Design"],
+                "sameAs": [
+                    "https://github.com/Sebastian-Inaba",
+                    "https://www.linkedin.com/in/sebastian-inaba-123abc/",
+                    "https://twitter.com/example/idonthaveoneyet"
+                ],
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "Freelance"
+                }
+            }
+        </script>
+    </head>
+    <body class="theme--dark" aria-live="polite">
+        <div class="site">
+            <header class="site__header" role="banner">
+                <div class="header">
+                    <a href="/" class="header__logo" aria-label="Home">INABA</a>
+
+                    <button
+                        class="header__hamburger"
+                        aria-label="Toggle navigation"
+                        aria-expanded="false"
+                        aria-controls="nav-mobile"
+                    >
+                        <span class="header__hamburger-icon"></span>
+                    </button>
+
+                    <div class="header__actions">
+                        <button class="mode-toggle" aria-label="Toggle dark mode">
+                            <img
+                                class="mode-toggle__icon mode-toggle__icon--dark"
+                                src="fontawesome/svgs/other/toggle-off-solid-full.svg"
+                                alt="Dark mode enabled"
+                                loading="lazy"
+                            />
+                            <img
+                                class="mode-toggle__icon mode-toggle__icon--light"
+                                src="fontawesome/svgs/other/toggle-on-solid-full.svg"
+                                alt="Light mode enabled"
+                                loading="lazy"
+                            />
+                        </button>
                     </div>
                 </div>
-                <div class="buttonRow">
-                    <a href="projects.html" class="ctaButton secondary viewAllButton">See All Projects</a>
-                    <a href="https://github.com/yourusername" class="ctaButton secondary viewAllButton" target="_blank" rel="noopener">View My GitHub</a>
+
+                <div class="nav-mobile__overlay"></div>
+
+                <nav class="nav-mobile" aria-hidden="true" id="nav-mobile">
+                    <div class="nav-mobile__header">
+                        <div class="nav-mobile__actions">
+                            <button class="nav-mobile__close" aria-label="Close menu">&#8630;</button>
+                        </div>
+                        <div class="nav-mobile__actions">
+                            <button class="mode-toggle" aria-label="Toggle dark mode">
+                                <img
+                                    class="mode-toggle__icon mode-toggle__icon--dark"
+                                    src="fontawesome/svgs/other/toggle-off-solid-full.svg"
+                                    alt="Dark mode enabled"
+                                    loading="lazy"
+                                />
+                                <img
+                                    class="mode-toggle__icon mode-toggle__icon--light"
+                                    src="fontawesome/svgs/other/toggle-on-solid-full.svg"
+                                    alt="Light mode enabled"
+                                    loading="lazy"
+                                />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="nav-mobile__content">
+                        <aside class="nav-mobile__social">
+                            <nav class="social-links" aria-label="Social media links">
+                                <a
+                                    href="https://github.com/Sebastian-Inaba"
+                                    target="_blank"
+                                    class="social-link"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img
+                                        class="social-link__icon"
+                                        src="fontawesome/svgs/brands/github.svg"
+                                        alt="GitHub profile of Sebastian Inaba"
+                                        loading="lazy"
+                                    />
+                                    <span class="social-link__text">GitHub</span>
+                                </a>
+                                <a
+                                    href="https://www.linkedin.com/in/sebastian-inaba-123abc/"
+                                    target="_blank"
+                                    class="social-link"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img
+                                        class="social-link__icon"
+                                        src="fontawesome/svgs/brands/linkedin.svg"
+                                        alt="LinkedIn profile of Sebastian Inaba"
+                                        loading="lazy"
+                                    />
+                                    <span class="social-link__text">LinkedIn</span>
+                                </a>
+                                <a href="mailto:your@email.com" class="social-link">
+                                    <img
+                                        class="social-link__icon"
+                                        src="fontawesome/svgs/other/at-solid-full.svg"
+                                        alt="Email Sebastian Inaba"
+                                        loading="lazy"
+                                    />
+                                    <span class="social-link__text">Contact</span>
+                                </a>
+                                <a href="CV/CV.pdf" download class="social-link">
+                                    <img
+                                        class="social-link__icon"
+                                        src="fontawesome/svgs/other/file-import-solid-full.svg"
+                                        alt="Download Sebastian Inaba's CV"
+                                        loading="lazy"
+                                    />
+                                    <span class="social-link__text">Download CV</span>
+                                </a>
+                                <a href="/ClassicWeb/index.html" class="social-link" rel="noopener">
+                                    <img 
+                                        class="social-link__icon" 
+                                        src="fontawesome/svgs/other/briefcase-solid-full.svg" 
+                                        alt="Classic Portfolio version of Sebastian Inaba's website" 
+                                        loading="lazy" 
+                                    />
+                                    <span class="social-link__text">Classic Portfolio</span>
+                                </a>
+                            </nav>
+                            <div class="footer-credit">
+                                &copy;
+                                <span class="footer-credit__year"></span>
+                                Created by Sebastian Inaba. All rights reserved.
+                            </div>
+                        </aside>
+                    </div>
+                </nav>
+            </header>
+
+            <main class="main">
+                <div class="window">
+                    <div class="portfolio-grid">
+                        <aside class="social-nav" aria-label="Social media links">
+                            <nav class="social-links">
+                                <a
+                                    href="https://github.com/Sebastian-Inaba"
+                                    target="_blank"
+                                    class="social-link"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img
+                                        class="social-link__icon"
+                                        src="fontawesome/svgs/brands/github.svg"
+                                        alt="GitHub profile of Sebastian Inaba"
+                                        loading="lazy"
+                                    />
+                                    <span class="social-link__text">GitHub</span>
+                                </a>
+                                <a
+                                    href="https://www.linkedin.com/in/sebastian-inaba-123abc/"
+                                    target="_blank"
+                                    class="social-link"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img
+                                        class="social-link__icon"
+                                        src="fontawesome/svgs/brands/linkedin.svg"
+                                        alt="LinkedIn profile of Sebastian Inaba"
+                                        loading="lazy"
+                                    />
+                                    <span class="social-link__text">LinkedIn</span>
+                                </a>
+                                <a href="mailto:your@email.com" class="social-link">
+                                    <img
+                                        class="social-link__icon"
+                                        src="fontawesome/svgs/other/at-solid-full.svg"
+                                        alt="Email Sebastian Inaba"
+                                        loading="lazy"
+                                    />
+                                    <span class="social-link__text">Contact</span>
+                                </a>
+                                <a href="CV/CV.pdf" download class="social-link">
+                                    <img
+                                        class="social-link__icon"
+                                        src="fontawesome/svgs/other/file-import-solid-full.svg"
+                                        alt="Download Sebastian Inaba's CV"
+                                        loading="lazy"
+                                    />
+                                    <span class="social-link__text">Download CV</span>
+                                </a>
+                                <a href="/ClassicWeb/index.html" class="social-link" rel="noopener">
+                                    <img 
+                                        class="social-link__icon" 
+                                        src="fontawesome/svgs/other/briefcase-solid-full.svg" 
+                                        alt="Classic Portfolio version of Sebastian Inaba's website" 
+                                        loading="lazy" 
+                                    />
+                                    <span class="social-link__text">Classic Portfolio</span>
+                                </a>
+                            </nav>
+                            <div class="footer-credit">
+                                &copy;
+                                <span class="footer-credit__year"></span>
+                                Created by Sebastian Inaba. All rights reserved.
+                            </div>
+                        </aside>
+
+                        <section class="projects-scroll-container" aria-label="Projects">
+                            <h1 class="visually-hidden">Sebastian Inaba Web Development Portfolio</h1>
+                            
+                            <div class="carousel">
+                                <div class="carousel__scroll-wrapper">
+                                    <div class="carousel__pages">
+                                        <div class="carousel__page">
+                                            <article class="project-card skeleton" aria-labelledby="project1-title" tabindex="0" role="region">
+                                                <div
+                                                    class="project-card__background"
+                                                    data-src="images/highlight/modernPortfolioHighlight.png"
+                                                    alt="Image of how my Portfolio project looks like"
+                                                ></div>
+                                                <div class="project-card__overlay"></div>
+                                                <div class="skeleton-content">
+                                                    <div class="skeleton-title"></div>
+                                                    <div class="skeleton-text"></div>
+                                                    <div class="skeleton-text"></div>
+                                                    <div>
+                                                        <span class="skeleton-tag"></span>
+                                                        <span class="skeleton-tag"></span>
+                                                        <span class="skeleton-tag"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="project-card__content">
+                                                    <h2 id="project1-title" class="project-card__title">
+                                                        Portfolio Website.
+                                                    </h2>
+                                                    <div class="project-card__reveal">
+                                                        <p class="project-card__desc">
+                                                            My personal portfolio showcasing my projects and skills.
+                                                            Built with vanilla tech.
+                                                        </p>
+                                                        <div class="project-card__tags">
+                                                            <span class="tag">HTML</span>
+                                                            <span class="tag">CSS</span>
+                                                            <span class="tag">JavaScript</span>
+                                                        </div>
+                                                        <a
+                                                            href="https://github.com/Sebastian-Inaba/Portfolio"
+                                                            target="_blank"
+                                                            class="project-card__link"
+                                                            rel="noopener noreferrer"
+                                                        >
+                                                            View on GitHub
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="project-card skeleton" aria-labelledby="project2-title" tabindex="0" role="region">
+                                                <div
+                                                    class="project-card__background"
+                                                    data-src="images/highlight/RandomMovieHighlight.png"
+                                                    alt="Image of how my WhatMovietoWatch project looks like"
+                                                ></div>
+                                                <div class="project-card__overlay"></div>
+                                                <div class="skeleton-content">
+                                                    <div class="skeleton-title"></div>
+                                                    <div class="skeleton-text"></div>
+                                                    <div class="skeleton-text"></div>
+                                                    <div>
+                                                        <span class="skeleton-tag"></span>
+                                                        <span class="skeleton-tag"></span>
+                                                        <span class="skeleton-tag"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="project-card__content">
+                                                    <h2 id="project2-title" class="project-card__title">
+                                                        What Movie to Watch.
+                                                    </h2>
+                                                    <div class="project-card__reveal">
+                                                        <p class="project-card__desc">
+                                                            React app that fetches and displays movies using the movie database API.
+                                                        </p>
+                                                        <div class="project-card__tags">
+                                                            <span class="tag">React</span>
+                                                            <span class="tag">Node.js</span>
+                                                            <span class="tag">TypeScript</span>
+                                                            <span class="tag">CSS</span>
+                                                            <span class="tag">Vite</span>
+                                                            <span class="tag">Prettier</span>
+                                                        </div>
+                                                        <a
+                                                            href="https://github.com/Sebastian-Inaba/WhatMovieToWatch"
+                                                            target="_blank"
+                                                            class="project-card__link"
+                                                            rel="noopener noreferrer"
+                                                        >
+                                                            View on GitHub
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="project-card skeleton" aria-labelledby="project3-title" tabindex="0" role="region">
+                                                <div
+                                                    class="project-card__background"
+                                                    data-src="images/highlight/TodoHubHighLight.png"
+                                                    alt="Image of how my TodoHub project looks like"
+                                                ></div>
+                                                <div class="project-card__overlay"></div>
+                                                <div class="skeleton-content">
+                                                    <div class="skeleton-title"></div>
+                                                    <div class="skeleton-text"></div>
+                                                    <div class="skeleton-text"></div>
+                                                    <div>
+                                                        <span class="skeleton-tag"></span>
+                                                        <span class="skeleton-tag"></span>
+                                                        <span class="skeleton-tag"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="project-card__content">
+                                                    <h2 id="project3-title" class="project-card__title">
+                                                        ToDoHub.
+                                                    </h2>
+                                                    <div class="project-card__reveal">
+                                                        <p class="project-card__desc">
+                                                            Productivity application for managing tasks with CRUD setup and features like authentication, messaging, and more.
+                                                        </p>
+                                                        <div class="project-card__tags">
+                                                            <span class="tag">HTML</span>
+                                                            <span class="tag">CSS</span>
+                                                            <span class="tag">JavaScript</span>
+                                                            <span class="tag">Express.js</span>
+                                                            <span class="tag">MongoDB</span>
+                                                            <span class="tag">Supabase</span>
+                                                            <span class="tag">Figma</span>
+                                                        </div>
+                                                        <a
+                                                            href="https://github.com/Sebastian-Inaba/ToDoHub"
+                                                            target="_blank"
+                                                            class="project-card__link"
+                                                            rel="noopener noreferrer"
+                                                        >
+                                                            View on GitHub
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="project-card skeleton" aria-labelledby="project4-title" tabindex="0" role="region">
+                                                <div
+                                                    class="project-card__background"
+                                                    data-src="images/highlight/ComponentLibraryHighlight.png"
+                                                    alt="Image of how my ComponentLibrary project looks like"
+                                                ></div>
+                                                <div class="project-card__overlay"></div>
+                                                <div class="skeleton-content">
+                                                    <div class="skeleton-title"></div>
+                                                    <div class="skeleton-text"></div>
+                                                    <div class="skeleton-text"></div>
+                                                    <div>
+                                                        <span class="skeleton-tag"></span>
+                                                        <span class="skeleton-tag"></span>
+                                                        <span class="skeleton-tag"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="project-card__content">
+                                                    <h2 id="project4-title" class="project-card__title">
+                                                        React TypeScript Library.
+                                                    </h2>
+                                                    <div class="project-card__reveal">
+                                                        <p class="project-card__desc">
+                                                            React TypeScript component library.
+                                                        </p>
+                                                        <div class="project-card__tags">
+                                                            <span class="tag">React</span>
+                                                            <span class="tag">TypeScript</span>
+                                                        </div>
+                                                        <a
+                                                            href="https://github.com/Sebastian-Inaba/ReactTypeScriptLibrary"
+                                                            target="_blank"
+                                                            class="project-card__link"
+                                                            rel="noopener noreferrer"
+                                                        >
+                                                            View on GitHub
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+
+                                        <div class="carousel__page">
+                                            <article class="project-card skeleton" aria-labelledby="project5-title" tabindex="0" role="region">
+                                                <div
+                                                    class="project-card__background"
+                                                    data-src="images/highlight/githubHighlight.png"
+                                                    alt="Image of how my github looks like"
+                                                ></div>
+                                                <div class="project-card__overlay"></div>
+                                                <div class="skeleton-content">
+                                                    <div class="skeleton-title"></div>
+                                                    <div class="skeleton-text"></div>
+                                                    <div class="skeleton-text"></div>
+                                                    <div>
+                                                        <span class="skeleton-tag"></span>
+                                                        <span class="skeleton-tag"></span>
+                                                        <span class="skeleton-tag"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="project-card__content">
+                                                    <h2 id="project5-title" class="project-card__title">
+                                                        Comming Soon...
+                                                    </h2>
+                                                    <div class="project-card__reveal">
+                                                        <p class="project-card__desc">
+                                                            More exciting projects are on the way!
+                                                        </p>
+                                                        <div class="project-card__tags">
+                                                        </div>
+                                                        <a
+                                                            href="https://github.com/Sebastian-Inaba"
+                                                            target="_blank"
+                                                            class="project-card__link"
+                                                            rel="noopener noreferrer"
+                                                        >
+                                                            View Me on GitHub
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel__nav">
+                                    <button class="carousel__arrow carousel__arrow--left" aria-label="Previous projects page">
+                                        ❮
+                                    </button>
+                                    <div class="carousel__dots">
+                                        <button
+                                            class="carousel__dot carousel__dot--active"
+                                            aria-label="Go to projects page 1"
+                                        ></button>
+                                        <button class="carousel__dot" aria-label="Go to projects page 2"></button>
+                                    </div>
+                                    <button class="carousel__arrow carousel__arrow--right" aria-label="Next projects page">
+                                        ❯
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section id="section5">
-            <div class="content contactSection">
-                <h1>Contact</h1>
-                <p>Get in touch via email:</p>
-                <form class="contactForm" action="https://formspree.io/f/mldngpwo" method="POST" enctype="text/plain">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="ctaButton">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footerMedia">
-            <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
-                <img src="fontawesome/svgs/brands/github.svg" alt="GitHub logo" class="footerIcon">
-            </a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
-                <img src="fontawesome/svgs/brands/linkedin.svg" alt="LinkedIn logo" class="footerIcon">
-            </a>
-            <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter">
-                <img src="fontawesome/svgs/brands/twitter.svg" alt="Twitter logo" class="footerIcon">
-            </a>
+            </main>
         </div>
-        <div class="footerCredit">
-            &copy; <span id="getYear"></span> Created by Sebastian Inaba. All rights reserved.
-        </div>
-    </footer>
-    <script src="script.js"></script>
-</body>
+        <script src="/ModernWeb/modern-script.js"></script>
+    </body>
 </html>
