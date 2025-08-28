@@ -46,11 +46,11 @@ It was completely created from scratch, replacing the first portfolio.
 
 ## Development Process(New Portfolio)
 
-- Code is **cleaner** with full **SEO setup** (except WebP images for now).
+- Code is **cleaner** with full **SEO setup**.
 - CSS and classes follow **BEM** and **SMACSS** methodology.
-- Fully **responsive** according to **WCAG guidelines** (tab navigation improvements in progress).
+- Fully **responsive** according to **WCAG guidelines**.
 - Fully **animated** for smoother movement.
-- **Light and dark mode** options for better viewing preference and whoever wants to look at the sun while navigation(light theme).
+- **Light and dark mode** options for better viewing preference and whoever wants to look at the sun while navigating(light theme).
 
 ## Development Process(Old Portfolio)
 
