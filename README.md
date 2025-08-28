@@ -7,7 +7,7 @@ Personal portfolio built with HTML, CSS, and JS. This repository documents both 
 ## Project Overview
 
 This portfolio website showcases my skills, projects, and contact info.  
-The original portfolio is not completed, it lacks project entries, SEO links, and GitHub links. Still.....
+The original portfolio is not completed and no longer worked on, it lacks project entries and just UX overall.
 
 The **new modern portfolio** is a full redesign that emphasizes minimalism, better usability, and responsiveness.  
 
@@ -15,7 +15,7 @@ The **new modern portfolio** is a full redesign that emphasizes minimalism, bett
 
 ## Design Process (New Portfolio)
 
-![New Portfolio Design](images/NewPortfolioDesign.png)
+![New Portfolio Design](images/NewPortfolioDesign.webp)
 
 The **new portfolio** aims to add more interactive features, fun elements and follow **WCAG** guidelines, here are some id like to add in the future:
 
@@ -31,13 +31,13 @@ The new design prioritizes interactivity, accessibility, and personalization, wh
 ## Design Process (Old Portfolio)
 
 ### Original Design (from Figma)
-![Original Figma Design](images/FigmaDesign.png)
+![Original Figma Design](images/OldPortfolioDesign.webp)
 
 I initially designed the site with a more "complex" layout in Figma.  
 I simplified it for better usability and responsiveness, as I wasn't satisfied with the original design.
 
 ### Current Live Design
-![Current Live Design](images/PortfolioDesign.png)
+![Current Live Design](images/NewOldPortfolioDesign.webp)
 
 The current design focuses on **minimalism** and a **clean user experience**.  
 It was completely created from scratch, replacing the first portfolio.
@@ -62,11 +62,7 @@ It was completely created from scratch, replacing the first portfolio.
 
 ## To do
 
-- Convert images to webp
-- Add hamburger to classic portfolio with a redirect button to new portfolio
-- Add project links to classic portfolio
-- Finnish SEO on classic portfolio
-- Clean up classic portfolio code if there is anything that looks bad
+- Start implementing message board
 
 ---
 

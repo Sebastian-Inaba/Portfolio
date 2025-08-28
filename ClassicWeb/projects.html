@@ -4,42 +4,62 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Sebastian Inaba Portfolio</title>
-        <meta name="description" content="Portfolio of Sebastian Inaba" />
-        <meta
-            name="keywords"
-            content="Sebastian Inaba, Inaba, webmaster, web developer, portfolio, Sweden, Japan, JavaScript, React, Node.js, CSS, HTML, WordPress, Figma"
-        />
-        <meta name="author" content="Sebastian Inaba" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="classic-style.css" />
         <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-        <meta property="og:title" content="Sebastian Inaba | Web Developer Portfolio" />
-        <meta
-            property="og:description"
-            content="Portfolio of Sebastian Inaba, a Swedish web developer based in Japan. Specializing in creative, user-friendly, minimalist web experiences."
-        />
+
+        <!-- Primary Meta Tags -->
+        <meta name="description" content="Sebastian Inaba,  Swedish web developer based in Japan specializing in React, Node.js, and modern web applications. Creative, user-friendly, and minimalist web experiences." />
+        <meta name="keywords" content="Sebastian Inaba, Inaba Sebastian, web developer, web designer, frontend developer, React developer, Node.js developer, Sweden, Japan, JavaScript, React, Node.js, CSS, HTML, MongoDB, MERN stack, Figma, portfolio" />
+        <meta name="author" content="Sebastian Inaba" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://InabaSebastian.com/ClassicWeb" />
+        
+        <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://your-portfolio-url.com/" />
-        <meta property="og:image" content="https://your-portfolio-url.com/images/PhotoMe.jpg" />
+        <meta property="og:url" content="https://InabaSebastian.com/ClassicWeb" />
+        <meta property="og:title" content="Sebastian Inaba | Web Developer & Designer" />
+        <meta property="og:description" content="Swedish web developer based in Japan specializing in React, Node.js, and modern web applications. Creative, user-friendly, and minimalist web experiences." />
+        <meta property="og:image" content="https://InabaSebastian.com/images/highlight/portfolioHighlightPic.webp" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content="Sebastian Inaba Portfolio" />
+        
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://InabaSebastian.com/ClassicWeb" />
+        <meta property="twitter:title" content="Sebastian Inaba | Web Developer & Designer" />
+        <meta property="twitter:description" content="Swedish web developer based in Japan specializing in React, Node.js, and modern web applications." />
+        <meta property="twitter:image" content="https://InabaSebastian.com/images/highlight/portfolioHighlightPic.webp" />
+        
+        <!-- Schema Structured Data -->
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
                 "@type": "Person",
                 "name": "Sebastian Inaba",
-                "url": "https://your-portfolio-url.com",
-                "image": "https://your-portfolio-url.com/images/PhotoMe.jpg",
+                "url": "https://InabaSebastian.com/ClassicWeb",
+                "image": "https://InabaSebastian.com/images/highlight/portfolioHighlightPic.webp",
                 "jobTitle": "Web Developer",
+                "description": "Swedish web developer based in Japan specializing in React, Node.js, and modern web applications.",
+                "nationality": ["Swedish"],
+                "knowsLanguage": ["en", "sv"],
+                "knowsAbout": ["Web Development", "React", "Node.js", "JavaScript", "MERN Stack", "Frontend Development", "UI/UX Design"],
                 "sameAs": [
-                    "https://github.com/yourusername",
-                    "https://linkedin.com/in/yourusername",
-                    "https://twitter.com/yourusername"
-                ]
+                    "https://github.com/Sebastian-Inaba",
+                    "https://www.linkedin.com/in/sebastian-inaba-123abc/",
+                    "https://twitter.com/example/idonthaveoneyet"
+                ],
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "Freelance"
+                }
             }
         </script>
     </head>
     <body>
         <header class="siteHeader">
-            <a href="/" class="logo" aria-label="Home">INABA</a>
+            <a href="/ClassicWeb/" class="logo" aria-label="Home">INABA</a>
             <div class="header-actions">
                 <a href="index.html#section5" class="ctaButton">Contact Me</a>
                 <a href="CV/CV .pdf" class="ctaButton secondary" download>Download CV</a>
@@ -52,17 +72,17 @@
                     <div class="projectsGrid">
                         <div class="projectCard">
                             <img
-                                src="images/portfolioHighlightPicSmall.png"
-                                alt="Screenshot of My Portfolio website"
+                                src="../images/highlight/modernPortfolioHighlight.webp"
+                                alt="Screenshot of My New Portfolio website"
                                 class="project-image"
                             />
-                            <h2>My Portfolio</h2>
-                            <p>My first personal project</p>
+                            <h2>My New Portfolio</h2>
+                            <p>A modern and updated version</p>
                             <p class="projectTools">HTML, CSS, JavaScript</p>
                             <div class="buttonRow">
-                                <a href="projectDetails.html" class="ctaButton">View Project</a>
+                                <!--<a href="#" class="ctaButton">View Project</a>-->
                                 <a
-                                    href="https://github.com/yourusername/portfolio"
+                                    href="https://github.com/Sebastian-Inaba/Portfolio"
                                     class="ctaButton"
                                     target="_blank"
                                     rel="noopener"
@@ -71,22 +91,27 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- Repeat .projectCard for each project -->
                         <div class="projectCard">
                             <img
-                                src="images/anotherProject.png"
+                                src="../images/highlight/TodoHubHighLight.webp"
                                 alt="Screenshot of Another Project"
                                 class="project-image"
                             />
-                            <h2>Another Project</h2>
-                            <p>Short description of another project.</p>
-                            <p class="projectTools">React, Node.js, MongoDB</p>
+                            <h2>ToDoHub</h2>
+                            <p>A full CRUD to do application with a lot of features</p>
+                            <p class="projectTools">HTML, CSS, JavaScript, Figma, Express.js, MongoDB, Supabase</p>
                             <div class="buttonRow">
-                                <a href="#" class="ctaButton">View Project</a>
-                                <a href="#" class="ctaButton" target="_blank" rel="noopener">View GitHub</a>
+                                <!--<a href="#" class="ctaButton">View Project</a>-->
+                                <a 
+                                    href="https://github.com/Sebastian-Inaba/ToDoHub" 
+                                    class="ctaButton" 
+                                    target="_blank" 
+                                    rel="noopener"
+                                >
+                                    View GitHub
+                                </a>
                             </div>
                         </div>
-                        <!-- Add more projectCard blocks as needed -->
                     </div>
                 </div>
             </section>
@@ -109,6 +134,6 @@
                 Created by Sebastian Inaba. All rights reserved.
             </div>
         </footer>
-        <script src="script.js"></script>
+        <script src="classic-script.js"></script>
     </body>
 </html>

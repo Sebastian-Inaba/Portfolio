@@ -8,8 +8,8 @@
 @font-face {
     font-family: 'Poppins';
     src:
-        url(../Fonts/poppins/poppins-regular-webfont.woff) format('woff'),
-        url(../Fonts/poppins/poppins-regular-webfont.woff2) format('woff2');
+        url(../fonts/poppins/poppins-regular-webfont.woff) format('woff'),
+        url(../fonts/poppins/poppins-regular-webfont.woff2) format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -427,7 +427,6 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     padding: 1rem;
-    cursor: grab;
     overflow-y: hidden !important;
 }
 
@@ -436,7 +435,6 @@ body {
     flex-direction: row;
     transition: transform 0.5s ease;
     height: 100%;
-    cursor: grab;
 }
 
 .carousel__page {
@@ -445,7 +443,6 @@ body {
     flex-direction: column;
     padding: 1rem 1.5rem;
     box-sizing: border-box;
-    cursor: grab;
     overflow-y: auto;
     height: 100%;
     scrollbar-width: none; 
@@ -533,7 +530,7 @@ body {
   background-color: var(--accent);
   border-radius: 4px;
   right: 2px;
-  cursor: pointer;
+  cursor: grab;
   transition: background-color 0.2s;
 }
 
@@ -801,6 +798,18 @@ body {
     transform: scale(1.2);
 }
 
+.carousel__pages--dragging {
+  cursor: grabbing !important;
+}
+
+.carousel__pages--dragging .project-card {
+  cursor: grabbing !important;
+}
+
+.carousel__thumb:active {
+  cursor: grabbing;
+}
+
 /* Hover states */
 .mode-toggle:hover {
     background-color: var(--accent-opaque-10);
@@ -963,6 +972,10 @@ body {
 }
 
 .theme--light .project-card__desc {
+    color: var(--text);
+}
+
+.theme--light .project-card__title {
     color: var(--text);
 }
 

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // MOBILE NAVIGATION
-    {
+    {   {/*Container*/}
         // Mobile navigation elements
         const hamburgerBtn = document.querySelector('.header__hamburger');
         const navMobile = document.querySelector('.nav-mobile');
@@ -95,14 +95,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
     // FOOTER YEAR UPDATE
-    {
+    {   {/*Container*/}
         // Set current year in footer
         document.querySelectorAll('.footer-credit__year').forEach((el) => {
             el.textContent = new Date().getFullYear();
         });
     }
     // THEME TOGGLE
-    {  
+    {   {/*Container*/}
         // Theme toggle functionality
         const themeToggles = document.querySelectorAll('.mode-toggle');
         
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
     // CAROUSEL, LAZY LOADING, DRAG & SWIPE
-    {
+    {   {/*Container*/}
         // Carousel functionality
         const carouselPages = document.querySelector('.carousel__pages');
         const carouselDots = document.querySelectorAll('.carousel__dot');
@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 dragStartX = e.pageX;
                 dragCurrentX = dragStartX;
                 carouselPages.classList.add('carousel__pages--dragging');
-                document.body.style.cursor = 'pointer';
+                document.body.style.cursor = 'grabbing';
             });
 
             // Touch events
@@ -269,6 +269,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 dragStartX = startX;
                 dragCurrentX = startX;
                 carouselPages.classList.add('carousel__pages--dragging');
+                document.body.style.cursor = 'grabbing';
             }, { passive: false });
 
             carouselPages.addEventListener('touchmove', (e) => {

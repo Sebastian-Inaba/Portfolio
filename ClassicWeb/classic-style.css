@@ -144,6 +144,11 @@ section {
     gap: 2rem;
     color: var(--color-text-lightest);
 }
+.projectShowcaseWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
 .contactSection {
     display: flex;
     flex-direction: column;
@@ -531,6 +536,9 @@ section {
     #section1 {
         margin-top: 5rem;
     }
+    #section4 {
+        height: auto;
+    }
     #section4.projectsSection {
         height: auto !important;
         min-height: unset !important;
@@ -541,6 +549,11 @@ section {
     }
     .content.projectShowcase {
         padding: 0 1rem;
+    }
+    .projectShowcaseWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
 }
 
