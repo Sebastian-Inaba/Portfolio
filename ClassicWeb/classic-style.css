@@ -1,0 +1,632 @@
+/* 1. SETTINGS (variables, fonts)---------------------------------------------------------------------------------------*/
+:root {
+    --color-bg-darkest: #06202b;
+    --color-text-lightest: #f5eedd;
+    --color-teal-medium: #7ae2cf;
+    --color-teal-dark: #077a7d;
+    --color-white: #fff;
+    --color-gray-light: #ccc;
+    --color-gray-dark: #555;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src:
+        url(Fonts/poppins/poppins-regular-webfont.woff) format('woff'),
+        url(Fonts/poppins/poppins-regular-webfont.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gloria';
+    src: url(Fonts/Gloria/GloriaHallelujah.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Indieflower';
+    src: url(Fonts/indieflower/IndieFlower.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 2. TOOLS (none)-------------------------------------------------------------------------------------------------------*/
+
+/* 3. GENERIC (reset, box-sizing, base font) ----------------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,
+body {
+    height: 100%;
+    font-family: sans-serif;
+    background-color: var(--color-bg-darkest);
+    color: var(--color-text-lightest);
+}
+
+/* 4. ELEMENTS (bare HTML elements)--------------------------------------------------------------------------------------*/
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-text-lightest);
+}
+p {
+    font-size: 1.2rem;
+    color: var(--color-text-lightest);
+}
+footer {
+    padding: 2rem 0;
+    min-height: 90px;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color-teal-medium);
+}
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--color-bg-darkest);
+    color: var(--color-text-lightest);
+}
+
+/* 5. OBJECTS (layout, wrappers, grids)----------------------------------------------------------------------------------*/
+.header-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.siteHeader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background: none;
+    box-shadow: none;
+    pointer-events: auto;
+    color: var(--color-text-lightest);
+}
+.headerSection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.content {
+    width: 90%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: var(--color-text-lightest);
+}
+.introColumns {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 3rem;
+    width: 60%;
+    color: var(--color-text-lightest);
+}
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+.projectShowcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    color: var(--color-text-lightest);
+}
+.projectShowcaseWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.contactSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    color: var(--color-text-lightest);
+}
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.footerMedia {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+#section1,
+#section2,
+#section3,
+#section4 {
+    min-height: 60vh;
+    padding: 4rem 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+#section2,
+#section3 {
+    min-height: unset !important;
+    height: auto !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+/* 6. COMPONENTS (buttons, cards, forms, etc.)--------------------------------------------------------------------------*/
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--color-teal-medium);
+}
+.siteHeader a {
+    text-decoration: none;
+}
+.ctaButton {
+    background: var(--color-teal-medium);
+    color: var(--color-bg-darkest);
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.ctaButton:hover {
+    background: var(--color-teal-dark);
+    color: var(--color-text-lightest);
+}
+.ctaButton.secondary {
+    background: var(--color-teal-medium);
+    color: var(--color-bg-darkest);
+    margin-top: 0;
+    transition:
+        background 0.2s,
+        color 0.2s;
+}
+.ctaButton.secondary:hover {
+    background: var(--color-teal-dark);
+    color: var(--color-text-lightest);
+}
+.profileImage img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--color-teal-medium);
+    box-shadow: 0 2px 16px rgba(122, 226, 207, 0.4);
+}
+.introText {
+    text-align: left;
+    font-size: 2rem;
+}
+.introText h1 {
+    font-size: 4rem;
+}
+.skillCol {
+    background: var(--color-teal-dark);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+    border-top: 4px solid var(--color-teal-medium);
+    color: var(--color-text-lightest);
+}
+.skillCol:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(122, 226, 207, 0.4);
+    border-top: 4px solid var(--color-text-lightest);
+}
+.skillCol h2 {
+    margin-bottom: 1rem;
+    color: var(--color-text-lightest);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+.skillCol ul {
+    list-style: none;
+    padding: 0;
+}
+.skillCol li {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--color-text-lightest);
+}
+.skillItem {
+    background: var(--color-teal-dark);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition:
+        transform 0.18s,
+        box-shadow 0.18s;
+    border-top: 4px solid var(--color-teal-medium);
+    width: 140px;
+    min-height: 120px;
+    box-sizing: border-box;
+    justify-content: center;
+    color: var(--color-text-lightest);
+}
+.skillItem:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 8px 32px rgba(122, 226, 207, 0.52);
+    border-top: 4px solid var(--color-text-lightest);
+}
+.skillItem img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.75rem;
+    filter: grayscale(0.2) brightness(1.2);
+    transition: filter 0.2s;
+}
+.skillItem:hover img {
+    filter: brightness(1.3);
+}
+.skillItem span {
+    font-size: 1.1rem;
+    color: var(--color-text-lightest);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.featuredProject {
+    background: var(--color-teal-dark);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+    padding: 2rem 1.5rem;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--color-text-lightest);
+}
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.projectCard {
+    background: var(--color-teal-dark, #1d3b3a);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--color-text-lightest, #fff);
+}
+
+.project-image {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+.projectTools {
+    font-size: 0.95rem;
+    color: var(--color-teal-medium, #4fd1c5);
+    margin-bottom: 0.5rem;
+}
+.projectShowcase h1 {
+    color: var(--color-teal-medium);
+    letter-spacing: 3px;
+}
+.buttonRow {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.buttonRow .ctaButton {
+    margin: 0;
+}
+.viewAllButton {
+    font-size: 1.1rem;
+}
+.contactSection h1 {
+    color: var(--color-teal-medium);
+    letter-spacing: 3px;
+}
+.contactForm input,
+.contactForm textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-teal-medium);
+    border-radius: 6px;
+    font-size: 1rem;
+    resize: none;
+    background-color: var(--color-bg-darkest);
+    color: var(--color-text-lightest);
+}
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+    color: var(--color-teal-medium);
+}
+.contactForm input:focus,
+.contactForm textarea:focus {
+    border-color: var(--color-text-lightest);
+    outline: none;
+}
+.contactForm button {
+    margin-top: 0.5rem;
+    background: var(--color-teal-medium);
+    color: var(--color-bg-darkest);
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.contactForm button:hover {
+    background: var(--color-teal-dark);
+    color: var(--color-text-lightest);
+}
+.nameSpan {
+    font-weight: bold;
+    color: var(--color-teal-medium);
+    font-size: 3.5rem;
+}
+.aboutMe h1 {
+    color: var(--color-teal-medium);
+    letter-spacing: 3px;
+}
+.aboutMe p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    line-height: 1.6;
+    margin: 0.5em 0;
+    text-align: left;
+    width: 85%;
+}
+.aboutMe p span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-teal-medium);
+}
+.footerIcon {
+    width: 28px;
+    height: 28px;
+    filter: grayscale(1);
+    transition: filter 0.2s;
+    filter: brightness(0.8) invert(1);
+}
+.footerIcon:hover {
+    filter: brightness(1) invert(1);
+}
+.footerCredit {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-teal-medium);
+}
+
+/* 7. UTILITIES (none in this file)-------------------------------------------------------------------------------------*/
+
+/* 8. Responsive Styles-------------------------------------------------------------------------------------------------*/
+
+/* Small Laptops: 769px – 1024px */
+@media (max-width: 1024px) {
+    .introColumns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+    }
+    .introText {
+        width: 80%;
+    }
+    .skillsGrid {
+        grid-template-columns: repeat(4, 0fr);
+        gap: 1.2rem;
+    }
+    #section1,
+    #section2,
+    #section3,
+    #section4 {
+        min-height: 60vh;
+        padding: 1.5rem 0.5rem;
+    }
+    .projectsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet: 481px – 768px */
+@media (max-width: 768px) {
+    .introColumns {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+        padding: 1rem 0;
+    }
+    .introText {
+        font-size: 1.5rem;
+    }
+    .nameSpan {
+        font-size: 2.5rem;
+    }
+    .skillsGrid {
+        grid-template-columns: repeat(3, 0.4fr);
+        gap: 1rem;
+    }
+    .content,
+    .aboutMe,
+    .projectShowcase,
+    .contactSection {
+        padding: 0 1rem;
+        width: 100%;
+    }
+    .siteHeader {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem;
+        width: 100%;
+    }
+    .buttonRow {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .aboutMe p {
+        font-size: 0.95rem;
+        width: 100%;
+        text-align: left;
+    }
+    #section1,
+    #section2,
+    #section3,
+    #section4 {
+        min-height: 40vh;
+        padding: 1rem 0.5rem;
+    }
+    .projectsGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .projectCard {
+        padding: 1.2rem 0.7rem;
+    }
+    #section1 {
+        margin-top: 5rem;
+    }
+    #section4 {
+        height: auto;
+    }
+    #section4.projectsSection {
+        height: auto !important;
+        min-height: unset !important;
+        display: block !important;
+        padding: 12rem 0 !important;
+        align-items: initial !important;
+        justify-content: initial !important;
+    }
+    .content.projectShowcase {
+        padding: 0 1rem;
+    }
+    .projectShowcaseWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+/* Mobile: 320px – 480px */
+@media (max-width: 480px) {
+    .introColumns {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0.5rem 0;
+    }
+    .skillsGrid {
+        grid-template-columns: repeat(2, 0.2fr);
+        gap: 0.5rem;
+    }
+    .skillItem {
+        width: 120px;
+        min-height: 90px;
+        padding: 1rem 0.5rem;
+    }
+    .skillItem img {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 0.5rem;
+    }
+    .content,
+    .aboutMe,
+    .projectShowcase,
+    .contactSection {
+        padding: 0 0.5rem;
+        width: 100%;
+    }
+    .siteHeader {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0.7rem;
+        width: 100%;
+    }
+    .buttonRow {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+    .aboutMe p {
+        font-size: 0.85rem;
+        width: 100%;
+        text-align: left;
+    }
+    #section1,
+    #section2,
+    #section3,
+    #section4 {
+        min-height: unset;
+        height: auto;
+        margin-bottom: 1.2rem;
+        padding: 0.7rem 0.2rem;
+    }
+    .profileImage img {
+        width: 180px;
+        height: 180px;
+    }
+    #section1 {
+        margin-top: 7rem;
+    }
+    #section1 {
+        margin-top: 10rem;
+    }
+    #section2 {
+        margin-top: 10rem;
+    }
+    #section3 {
+        margin-bottom: 10rem;
+    }
+    .ctaButton {
+        font-size: 1rem;
+        padding: 0.5em 1em;
+    }
+}
