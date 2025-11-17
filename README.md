@@ -1,6 +1,6 @@
 # Sebastian Inaba Portfolio
 
-**Live Demo at:**
+**Live at:** https://sebastian-inaba.github.io/Portfolio/
 
 Personal portfolio built with HTML, CSS, and JS. This repository documents both the original portfolio and my new modern redesign.
 
