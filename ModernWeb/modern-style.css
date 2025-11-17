@@ -606,6 +606,8 @@ body {
 }
 
 .project-card__reveal {
+    display: flex;
+    flex-direction: column;
     opacity: 0;
     transform: translateX(-20px);
     transition: all 1.5s ease;
@@ -657,6 +659,10 @@ body {
     transform: translateX(-20px);
     transition: all 0.4s ease;
     transition-delay: 0.1s;
+}
+
+.project-card__reveal > a:only-of-type { /* Single links stays normal but on 2+ links media query space between */
+    align-self: flex-start;
 }
 
 .projects-scroll-container {
@@ -1168,6 +1174,29 @@ body {
     .window {
         height: auto;
         min-height: calc(100vh - 60px);
+    }
+}
+
+
+@media (min-width: 408px) { /* Special positioning if there are 2+ links on desktop */
+    .project-card__reveal > a:first-of-type:nth-last-of-type(n+2) {
+        align-self: flex-start;
+    }
+
+    .project-card__reveal > a:last-of-type:nth-of-type(n+2) {
+        align-self: flex-end;
+        margin-top: -2.3rem;
+    }
+}
+
+@media (max-width: 407px) { /* On mobile, stack links vertically */
+    .project-card__reveal > a {
+        align-self: flex-start;
+        margin-top: 0 !important;
+    }
+    
+    .project-card__reveal > a + a {
+        margin-top: 1rem !important;
     }
 }
 
