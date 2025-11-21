@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     // MOBILE NAVIGATION
-    {   {/*Container*/}
+    {
+        {
+            /*Container*/
+        }
         // Mobile navigation elements
         const hamburgerBtn = document.querySelector('.header__hamburger');
         const navMobile = document.querySelector('.nav-mobile');
@@ -10,18 +13,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Mobile navigation functions
         function toggleMobileNavAccessibility(isOpen) {
-        const navMobile = document.querySelector('.nav-mobile');
-        const interactiveElements = navMobile.querySelectorAll('button, a, [tabindex]');
-        
-        interactiveElements.forEach(el => {
-            if (isOpen) {
-            el.removeAttribute('tabindex');
-            el.removeAttribute('aria-hidden');
-            } else {
-            el.setAttribute('tabindex', '-1');
-            el.setAttribute('aria-hidden', 'true');
-            }
-        });
+            const navMobile = document.querySelector('.nav-mobile');
+            const interactiveElements = navMobile.querySelectorAll('button, a, [tabindex]');
+
+            interactiveElements.forEach((el) => {
+                if (isOpen) {
+                    el.removeAttribute('tabindex');
+                    el.removeAttribute('aria-hidden');
+                } else {
+                    el.setAttribute('tabindex', '-1');
+                    el.setAttribute('aria-hidden', 'true');
+                }
+            });
         }
 
         function openNavMobile() {
@@ -32,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
             navMobile.setAttribute('aria-hidden', 'false');
 
             // Enable all interactive buttons/links
-            navMobileButtons.forEach(el => {
+            navMobileButtons.forEach((el) => {
                 el.disabled = false;
                 el.style.opacity = '1';
                 el.style.pointerEvents = 'auto';
@@ -49,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
             navMobile.setAttribute('aria-hidden', 'true');
 
             // Disable all interactive buttons/links
-            navMobileButtons.forEach(el => {
+            navMobileButtons.forEach((el) => {
                 el.disabled = true;
                 el.style.opacity = '0.5';
                 el.style.pointerEvents = 'none';
@@ -73,10 +76,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 btn.style.pointerEvents = 'none';
             });
         }
-        
+
         if (navMobileClose) navMobileClose.addEventListener('click', closeNavMobile);
         if (navMobileOverlay) navMobileOverlay.addEventListener('click', closeNavMobile);
-        
+
         // Escape key to close mobile nav
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && navMobile.classList.contains('nav-mobile--active')) {
@@ -95,26 +98,32 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
     // FOOTER YEAR UPDATE
-    {   {/*Container*/}
+    {
+        {
+            /*Container*/
+        }
         // Set current year in footer
         document.querySelectorAll('.footer-credit__year').forEach((el) => {
             el.textContent = new Date().getFullYear();
         });
     }
     // THEME TOGGLE
-    {   {/*Container*/}
+    {
+        {
+            /*Container*/
+        }
         // Theme toggle functionality
         const themeToggles = document.querySelectorAll('.mode-toggle');
-        
+
         function setTheme(mode) {
             document.body.classList.toggle('theme--light', mode === 'light');
             document.body.classList.toggle('theme--dark', mode === 'dark');
             localStorage.setItem('theme', mode);
         }
-        
+
         const savedTheme = localStorage.getItem('theme');
         setTheme(savedTheme === 'light' ? 'light' : 'dark');
-        
+
         themeToggles.forEach((btn) => {
             btn.addEventListener('click', () => {
                 setTheme(document.body.classList.contains('theme--light') ? 'dark' : 'light');
@@ -122,7 +131,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
     // CAROUSEL, LAZY LOADING, DRAG & SWIPE
-    {   {/*Container*/}
+    {
+        {
+            /*Container*/
+        }
         // Carousel functionality
         const carouselPages = document.querySelector('.carousel__pages');
         const carouselDots = document.querySelectorAll('.carousel__dot');
@@ -133,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const carousel = document.querySelector('.carousel');
         let scrollbar, thumb;
-        
+
         if (carousel) {
             scrollbar = document.createElement('div');
             scrollbar.className = 'carousel__scrollbar';
@@ -145,31 +157,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function updateCarousel() {
             if (!carouselPages) return;
-            
+
             const pageWidth = carouselPages.offsetWidth;
             carouselPages.style.transition = 'transform 0.5s ease';
             carouselPages.style.transform = `translateX(-${currentPage * pageWidth}px)`;
-            
+
             carouselDots.forEach((dot, index) => {
                 dot.classList.toggle('carousel__dot--active', index === currentPage);
             });
-            
+
             updateScrollThumb();
         }
 
         function updateScrollThumb() {
             if (!carouselPages || !scrollbar) return;
-            
+
             const currentPageEl = document.querySelectorAll('.carousel__page')[currentPage];
             if (!currentPageEl) return;
-            
+
             const scrollHeight = currentPageEl.scrollHeight;
             const clientHeight = currentPageEl.clientHeight;
-            
+
             if (scrollHeight > clientHeight) {
                 const thumbHeight = (clientHeight / scrollHeight) * clientHeight;
                 const thumbPosition = (currentPageEl.scrollTop / scrollHeight) * clientHeight;
-                
+
                 thumb.style.height = `${Math.max(thumbHeight, 20)}px`;
                 thumb.style.top = `${thumbPosition}px`;
                 scrollbar.style.display = 'block';
@@ -191,16 +203,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
         document.addEventListener('mousemove', (e) => {
             if (!isScrolling || !carouselPages) return;
-            
+
             const currentPageEl = document.querySelectorAll('.carousel__page')[currentPage];
             if (!currentPageEl) return;
-            
+
             const scrollHeight = currentPageEl.scrollHeight;
             const clientHeight = currentPageEl.clientHeight;
             const scrollbarRect = scrollbar.getBoundingClientRect();
             const yPosition = e.clientY - scrollbarRect.top;
             const scrollPosition = (yPosition / clientHeight) * scrollHeight;
-            
+
             currentPageEl.scrollTop = scrollPosition;
             updateScrollThumb();
         });
@@ -211,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         if (carouselPages) {
-            document.querySelectorAll('.carousel__page').forEach(page => {
+            document.querySelectorAll('.carousel__page').forEach((page) => {
                 page.addEventListener('scroll', updateScrollThumb);
             });
         }
@@ -241,10 +253,15 @@ document.addEventListener('DOMContentLoaded', function () {
         // Drag and swipe functionality
         let isDragging = false;
         let isMouseDragging = false;
-        let dragStartX = 0, dragCurrentX = 0, dragDelta = 0;
+        let dragStartX = 0,
+            dragCurrentX = 0,
+            dragDelta = 0;
         let dragThreshold = 60;
         let isTouch = false;
-        let startX = 0, startY = 0, currentX = 0, currentY = 0;
+        let startX = 0,
+            startY = 0,
+            currentX = 0,
+            currentY = 0;
         let isHorizontalIntent = null;
 
         if (carouselPages) {
@@ -260,66 +277,78 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             // Touch events
-            carouselPages.addEventListener('touchstart', (e) => {
-                isTouch = true;
-                isDragging = true;
-                isHorizontalIntent = null;
-                startX = e.touches[0].pageX;
-                startY = e.touches[0].pageY;
-                dragStartX = startX;
-                dragCurrentX = startX;
-                carouselPages.classList.add('carousel__pages--dragging');
-                document.body.style.cursor = 'grabbing';
-            }, { passive: false });
+            carouselPages.addEventListener(
+                'touchstart',
+                (e) => {
+                    isTouch = true;
+                    isDragging = true;
+                    isHorizontalIntent = null;
+                    startX = e.touches[0].pageX;
+                    startY = e.touches[0].pageY;
+                    dragStartX = startX;
+                    dragCurrentX = startX;
+                    carouselPages.classList.add('carousel__pages--dragging');
+                    document.body.style.cursor = 'grabbing';
+                },
+                { passive: false }
+            );
 
-            carouselPages.addEventListener('touchmove', (e) => {
-                if (!isDragging || !isTouch) return;
-                
-                currentX = e.touches[0].pageX;
-                currentY = e.touches[0].pageY;
-                const deltaX = currentX - startX;
-                const deltaY = currentY - startY;
+            carouselPages.addEventListener(
+                'touchmove',
+                (e) => {
+                    if (!isDragging || !isTouch) return;
 
-                if (isHorizontalIntent === null) {
-                    isHorizontalIntent = Math.abs(deltaX) > Math.abs(deltaY);
-                }
+                    currentX = e.touches[0].pageX;
+                    currentY = e.touches[0].pageY;
+                    const deltaX = currentX - startX;
+                    const deltaY = currentY - startY;
 
-                if (isHorizontalIntent) {
-                    e.preventDefault();
-                    dragCurrentX = currentX;
-                    dragDelta = dragCurrentX - dragStartX;
-                    carouselPages.style.transition = 'none';
-                    const pageWidth = carouselPages.offsetWidth;
-                    carouselPages.style.transform = `translateX(${-currentPage * pageWidth + dragDelta}px)`;
-                }
-            }, { passive: false });
-
-            carouselPages.addEventListener('touchend', () => {
-                if (!isTouch) return;
-                
-                carouselPages.style.transition = '';
-                document.body.style.cursor = '';
-                
-                if (isHorizontalIntent) {
-                    const pageWidth = carouselPages.offsetWidth;
-                    if (Math.abs(dragDelta) > dragThreshold) {
-                        if (dragDelta < 0 && currentPage < totalPages - 1) currentPage++;
-                        else if (dragDelta > 0 && currentPage > 0) currentPage--;
+                    if (isHorizontalIntent === null) {
+                        isHorizontalIntent = Math.abs(deltaX) > Math.abs(deltaY);
                     }
-                    updateCarousel();
-                }
-                
-                isDragging = false;
-                isTouch = false;
-                isHorizontalIntent = null;
-                dragDelta = 0;
-            }, { passive: true });
+
+                    if (isHorizontalIntent) {
+                        e.preventDefault();
+                        dragCurrentX = currentX;
+                        dragDelta = dragCurrentX - dragStartX;
+                        carouselPages.style.transition = 'none';
+                        const pageWidth = carouselPages.offsetWidth;
+                        carouselPages.style.transform = `translateX(${-currentPage * pageWidth + dragDelta}px)`;
+                    }
+                },
+                { passive: false }
+            );
+
+            carouselPages.addEventListener(
+                'touchend',
+                () => {
+                    if (!isTouch) return;
+
+                    carouselPages.style.transition = '';
+                    document.body.style.cursor = '';
+
+                    if (isHorizontalIntent) {
+                        const pageWidth = carouselPages.offsetWidth;
+                        if (Math.abs(dragDelta) > dragThreshold) {
+                            if (dragDelta < 0 && currentPage < totalPages - 1) currentPage++;
+                            else if (dragDelta > 0 && currentPage > 0) currentPage--;
+                        }
+                        updateCarousel();
+                    }
+
+                    isDragging = false;
+                    isTouch = false;
+                    isHorizontalIntent = null;
+                    dragDelta = 0;
+                },
+                { passive: true }
+            );
         }
 
         // Global mouse events for dragging
         document.addEventListener('mousemove', (e) => {
             if (!isDragging || !isMouseDragging || !carouselPages) return;
-            
+
             dragCurrentX = e.pageX;
             dragDelta = dragCurrentX - dragStartX;
             carouselPages.style.transition = 'none';
@@ -329,17 +358,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
         document.addEventListener('mouseup', () => {
             if (!isDragging || !isMouseDragging || !carouselPages) return;
-            
+
             carouselPages.classList.remove('carousel__pages--dragging');
             document.body.style.cursor = '';
             carouselPages.style.transition = '';
-            
+
             const pageWidth = carouselPages.offsetWidth;
             if (Math.abs(dragDelta) > dragThreshold) {
                 if (dragDelta < 0 && currentPage < totalPages - 1) currentPage++;
                 else if (dragDelta > 0 && currentPage > 0) currentPage--;
             }
-            
+
             updateCarousel();
             isDragging = false;
             isMouseDragging = false;
@@ -348,7 +377,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         document.addEventListener('mouseleave', () => {
             if (!isDragging || !isMouseDragging || !carouselPages) return;
-            
+
             carouselPages.classList.remove('carousel__pages--dragging');
             document.body.style.cursor = '';
             carouselPages.style.transition = '';
@@ -366,7 +395,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (entry.isIntersecting) {
                     const bg = entry.target;
                     const src = bg.dataset.src;
-                    
+
                     if (src) {
                         bg.style.backgroundImage = `url(${src})`;
                         bg.classList.add('loaded');
@@ -379,7 +408,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 skeletonContent.style.display = 'none';
                             }
                         }
-                        
+
                         observer.unobserve(bg);
                     }
                 }
@@ -400,12 +429,12 @@ document.addEventListener('DOMContentLoaded', function () {
         // Add keyboard navigation for carousel cards
         function initKeyboardNavigation() {
             const projectCards = document.querySelectorAll('.project-card');
-            projectCards.forEach(card => {
-                card.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    this.click();
-                }
+            projectCards.forEach((card) => {
+                card.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
                 });
             });
         }
@@ -416,7 +445,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!focusedCard || !carouselPages) return;
 
             // Find which page contains the focused card
-            const pageIndex = Array.from(document.querySelectorAll('.carousel__page')).findIndex(page =>
+            const pageIndex = Array.from(document.querySelectorAll('.carousel__page')).findIndex((page) =>
                 page.contains(focusedCard)
             );
 
@@ -430,8 +459,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Update existing keyboard navigation to handle page changes
         function initKeyboardNavigation() {
             const projectCards = document.querySelectorAll('.project-card');
-            projectCards.forEach(card => {
-                card.addEventListener('keydown', function(e) {
+            projectCards.forEach((card) => {
+                card.addEventListener('keydown', function (e) {
                     if (e.key === 'Enter' || e.key === ' ') {
                         e.preventDefault();
                         this.click();
@@ -443,8 +472,8 @@ document.addEventListener('DOMContentLoaded', function () {
                             const activeCard = activeElement.closest('.project-card');
                             if (!activeCard || !carouselPages) return;
 
-                            const pageIndex = Array.from(document.querySelectorAll('.carousel__page')).findIndex(page =>
-                                page.contains(activeCard)
+                            const pageIndex = Array.from(document.querySelectorAll('.carousel__page')).findIndex(
+                                (page) => page.contains(activeCard)
                             );
 
                             if (pageIndex !== -1 && pageIndex !== currentPage) {
