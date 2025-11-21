@@ -2,39 +2,31 @@ const yearToday = new Date();
 const year = yearToday.getFullYear();
 
 window.addEventListener('DOMContentLoaded', () => {
-    // Prompt with slight delay
-    setTimeout(() => {
-        if (
-            confirm(
-                'This is part of an old portfolio, which is no longer in use.\n\nWould you like to visit my current portfolio?'
-            )
-        ) {
-            window.location.href = 'https://sebastian-inaba.github.io/Portfolio/ClassicWeb/';
-        }
-    }, 100);
-
-    // Set year
-    const yearEl = document.getElementById('getYear');
-    if (yearEl) yearEl.textContent = year;
-
-    // Update buttons initially
-    updateButtons();
-
-    // Update buttons on resize
-    window.addEventListener('resize', updateButtons);
+    if (
+        confirm(
+            'You are viewing an old version of my portfolio. Which is no longer in use.\n\n' +
+                'Click OK to continue viewing the old portfolio.\n' +
+                'Click Cancel to go back to where you came from.'
+        )
+    ) {
+        // OK, stay on the page
+    } else {
+        // Cancel, go back to previous page
+        history.back();
+    }
 });
 
 function updateButtons() {
-    const contactBtn = document.querySelector('.contact-btn');
-    const cvBtn = document.querySelector('.cv-btn');
-
-    if (!contactBtn || !cvBtn) return;
-
     if (window.innerWidth <= 425) {
-        contactBtn.textContent = 'Contact';
-        cvBtn.textContent = 'CV';
+        document.querySelector('.contact-btn').textContent = 'Contact';
+        document.querySelector('.cv-btn').textContent = 'CV';
     } else {
-        contactBtn.textContent = 'Contact Me';
-        cvBtn.textContent = 'Download CV';
+        document.querySelector('.contact-btn').textContent = 'Contact Me';
+        document.querySelector('.cv-btn').textContent = 'Download CV';
     }
 }
+
+window.addEventListener('resize', updateButtons);
+window.addEventListener('load', updateButtons);
+
+document.getElementById('getYear').textContent = year;
