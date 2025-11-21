@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "echo predeploy no-op",
-    "deploy": "gh-pages -d ."
+    "deploy": "gh-pages -d .",
+    "format": "prettier --write **/*.js"
   },
   "repository": {
     "type": "git",
