@@ -38,7 +38,7 @@ The new design prioritizes interactivity, accessibility, and personalization, wh
 I initially designed the site with a more "complex" layout in Figma.  
 I simplified it for better usability and responsiveness, as I wasn't satisfied with the original design.
 
-### Current Live Design
+### Old Design
 ![Current Live Design](images/NewOldPortfolioDesign.webp)
 
 The current design focuses on **minimalism** and a **clean user experience**.  
