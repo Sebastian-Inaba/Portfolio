@@ -25,7 +25,7 @@ const year = yearToday.getFullYear();
     if (location.pathname.includes(classicPath) || location.href.includes('ClassicWeb')) return;
 
     if (confirm("This is part of an old portfolio, which is no longer in use.\n\nWould you like to visit my current portfolio?")) {
-      window.location.href = "https://inabasebastian.com/Portfolio/ClassicWeb/";
+      window.location.href = "https://sebastian-inaba.github.io/Portfolio/ClassicWeb/";
     }
   }
 
